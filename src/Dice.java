@@ -14,7 +14,7 @@ public class Dice
 	{
 		numRolls = 0;
 	}
-	public double getnumRolls()
+	public double getNumRolls()
 	{
 		return numRolls;
 	}

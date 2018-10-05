@@ -4,33 +4,63 @@ public class DiceMain
 
 	public static void main(String[] args) 
 	{
-		Dice dice = new Dice(); //1st thing to do in test class: instantiate the dice class
-			// data type = Dice (class)
-			// variable = dice
-			// new Dice() = constructor
-		System.out.println(dice.roll());
-		System.out.println(dice.roll());
-		System.out.println(dice.roll());
-		System.out.println(dice.roll());
-		System.out.println(dice.roll());
-		System.out.println(dice.roll());
-		System.out.println(dice.roll());
-		System.out.println(dice.roll());
-		System.out.println(dice.roll());
-		System.out.println(dice.roll());
+		Dice dice = new Dice(); 
+		int count = 0;
+		int roll = dice.roll();   //must store info in variable to access data in future
+		System.out.println(roll); //system.out.println(dice.roll();
+								 //if(dice.roll(); -> wrong b/c it will print roll then check if the roll =3 
+								// this will roll the die twice -> WRONG 
 		
-		System.out.println("rolls" + dice.getnumRolls());
+		if (roll==3)
+		{
+			count++; //adds 1 to count every time the roll = 3
+					//can use if (roll==3) count ++ on the same line
+		}
 		
+		roll = dice.roll();  //cannot write int roll again b/c will get an error -> can't redeclare that same variable (can just reassign it to a dif number)
+		System.out.println(roll);
+		if (roll==3)
+		{
+			count++;
+		}
 		
-		//System.out.println(Math.random()*6);;
-		//((int)Math.random()*6) -> will cast math.random as an integer, but thats always 0-.999
-		//the above is an error (will always get 0)
-		System.out.println((int)(Math.random()*6)+1);
-		//int casts the floating point value (5.99) to get 5 -> add 1 to include 6
-		//int casts Math.number as an integer -> truncates it to 5 
-		//need () around (Math.random()*6) to get it to multiply by 6 first
-	
-	
+		roll = dice.roll();
+		System.out.println(roll);
+		if (roll==3)
+		{
+			count++;
+		}
+		
+		roll = dice.roll();
+		System.out.println(roll);
+		if (roll==3)
+		{
+			count++;
+		}
+		
+		roll = dice.roll();
+		System.out.println(roll);
+		if (roll==3)
+		{
+			count++;
+		}
+		
+		roll = dice.roll();
+		System.out.println(roll);
+		if (roll==3)
+		{
+			count++;
+		}
+		
+		System.out.println("you rolled three " + count + " times");
 	}
-
+		
+	
+	
+	
+	
+	
+	
+	
+	
 }
