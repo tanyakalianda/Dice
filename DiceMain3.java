@@ -13,19 +13,19 @@ public class DiceMain3
 		Dice dice1 = new Dice();
 		Dice dice2 = new Dice();
 		
-		Scanner in = new Scanner(System.in);
+		Scanner scan = new Scanner(System.in);
 		System.out.print("Enter value between 2 and 12: ");
-		if (in.hasNextInt())
+		if (scan.hasNextInt())
 		{
-			int value = in.nextInt();
-			in.nextLine();
+			int value = scan.nextInt();
+			scan.nextLine();
 			
-			while (value<2 || value>12)
+			while (value<2 || value>12) //cannot write (value<2 || >12) -> error
 			{
 				System.out.println("Error: The value must be between 2 and 12");
-				in = new Scanner(System.in);
+				scan.nextInt();		// OR in = new Scanner(System.in);
 				System.out.print("Enter another value: ");
-				value = in.nextInt();
+				value = scan.nextInt();
 			}
 			
 			int actualValue = value;
